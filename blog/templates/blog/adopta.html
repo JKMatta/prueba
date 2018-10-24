@@ -24,10 +24,10 @@
 			<div class="content-pegajoso">
 				<img src="{% static 'img/logo.png' %}" id="logo-tienda" alt="logo-tienda">
 				<ul class="options-pegajoso">
-					<li><a href="">NOSOTROS</a></li>
-					<li><a href="">GALERÍA</a></li>
+					<li><a href="{% url 'inicio' %}">NOSOTROS</a></li>
+					<li><a href="{% url 'post_list' %}">GALERÍA</a></li>
 					<li><a href="">ADOPTA</a></li>
-					<li><a href="">CONTACTO</a></li>
+					<li><a href="{% url 'contacto' %}">CONTACTO</a></li>
 				</ul>
 				<label for="check-offcanvas"><img src="{% static 'img/menu.svg' %}" id="btn-offcanvas" alt="boton-menu"></label>
 			</div>
@@ -35,10 +35,10 @@
 		<nav class="menu-offcanvas">
 			<div class="content-offcanvas">
 				<ul>
-					<li><a href="" id="item1">NOSOTROS</a></li>
-					<li><a href="" id="item2">GALERÍA</a></li>
+					<li><a href="{% url 'inicio' %}" id="item1">NOSOTROS</a></li>
+					<li><a href="{% url 'post_list' %}" id="item2">GALERÍA</a></li>
 					<li><a href="" id="item3">ADOPTA</a></li>
-					<li><a href="" id="item4">CONTACTO</a></li>
+					<li><a href="{% url 'contacto' %}" id="item4">CONTACTO</a></li>
 				</ul>
 			</div>
 		</nav>
