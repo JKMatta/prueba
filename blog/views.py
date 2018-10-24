@@ -37,3 +37,12 @@ def post_edit(request, pk):
     else:
         form = PostForm(instance=post)
     return render(request, 'blog/post_edit.html', {'form': form})
+
+def inicio(request):
+    return render(request, 'blog/inicio.html', {})
+
+def adopta(request):
+    return render(request, 'blog/adopta.html', {})
+
+def contacto(request):
+    return render(request, 'blog/contacto.html', {})

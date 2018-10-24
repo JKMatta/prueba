@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Mis Perris</title>
+	<link rel="stylesheet" href="{% static 'img/favicon.ico' %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<style>
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+      width: 70%;
+      margin: auto;
+    }
+    </style>
+</head>
+<body>
+	<header>
+		<input type="checkbox" name="checkbox" id="check-offcanvas">
+		<nav class="menu-pegajoso">
+			<div class="content-pegajoso">
+				<img src="{% static 'img/logo.png' %}" id="logo-tienda" alt="logo-tienda">
+				<ul class="options-pegajoso">
+					<li><a href="">NOSOTROS</a></li>
+					<li><a href="">GALERÍA</a></li>
+					<li><a href="">ADOPTA</a></li>
+					<li><a href="">CONTACTO</a></li>
+				</ul>
+				<label for="check-offcanvas"><img src="{% static 'img/menu.svg' %}" id="btn-offcanvas" alt="boton-menu"></label>
+			</div>
+		</nav>
+		<nav class="menu-offcanvas">
+			<div class="content-offcanvas">
+				<ul>
+					<li><a href="" id="item1">NOSOTROS</a></li>
+					<li><a href="" id="item2">GALERÍA</a></li>
+					<li><a href="" id="item3">ADOPTA</a></li>
+					<li><a href="" id="item4">CONTACTO</a></li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+	<section>
+		<div class="container-fluid">
+				<div class="content-contac">
+					<div class="contacto">
+						<h1>LO SENTIMOS.</h1>
+						<img src="{% static 'img/trabajo.png' %}">
+					</div>
+				</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container-fluid">
+			<p>Copyright © 2018 MisPerris. Todos los derechos reservados.</p>
+		</div>
+	</footer>
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

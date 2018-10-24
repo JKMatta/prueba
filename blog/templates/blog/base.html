@@ -1,26 +1,62 @@
 {% load static %}
 <html>
     <head>
-        <title>Django Girls blog</title>
+        <title>Mis Perris</title>
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+        <link rel="stylesheet" href="{% static 'css/blog.css' %}"> 
     </head>
     <body>
-        <div class="page-header">
-            {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% endif %}
-            <h1><a href="/">Django Girls Blog</a></h1>
-        </div>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                {% block content %}
-                {% endblock %}
+        <header>
+            <input type="checkbox" name="checkbox" id="check-offcanvas">
+            <nav class="menu-pegajoso">
+                <div class="content-pegajoso">
+                    <img src="{% static 'img/logo.png' %}" id="logo-tienda" alt="logo-tienda">
+                    <ul class="options-pegajoso">
+                        <li><a href="{% url 'inicio' %}">NOSOTROS</a></li>
+                        <li><a href="">GALERÍA</a></li>
+                        <li><a href="{% url 'adopta' %}">ADOPTA</a></li>
+                        <li><a href="{% url 'contacto' %}">CONTACTO</a></li>
+                    </ul>
+                    <label for="check-offcanvas"><img src="{% static 'img/menu.svg' %}" id="btn-offcanvas" alt="boton-menu"></label>
                 </div>
+            </nav>
+            <nav class="menu-offcanvas">
+                <div class="content-offcanvas">
+                    <ul>
+                        <li><a href="{% url 'inicio' %}" id="item1">NOSOTROS</a></li>
+                        <li><a href="" id="item2">GALERÍA</a></li>
+                        <li><a href="{% url 'adopta' %}" id="item3">ADOPTA</a></li>
+                        <li><a href="{% url 'contacto' %}" id="item4">CONTACTO</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="title-gal">
+                    <h2>PERRIS EN ADOPCION</h2>
+                    <p> Perros más lindos y tiernos buscan un hogar.</p>
+                </div>
+              {% if user.is_authenticated %}
+                    <a href="{% url 'post_new' %}" class="top-menu"><img src="{% static 'img/huella.png' %}"></a>
+                {% endif %}
+              <div class="row">
+                    {% block content %}
+                    {% endblock %}
+              </div>
             </div>
         </div>
-    </body>
+        <footer>
+            <div class="container-fluid">
+                <p>Copyright © 2018 MisPerris. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        </body>
 </html>
