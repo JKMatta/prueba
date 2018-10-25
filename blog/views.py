@@ -43,6 +43,6 @@ def inicio(request):
 
 def adopta(request):
     return render(request, 'blog/adopta.html', {})
-
+    
 def contacto(request):
     return render(request, 'blog/contacto.html', {})

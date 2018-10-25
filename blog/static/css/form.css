@@ -241,10 +241,20 @@ footer{
 		color: white;
 	}
 
+	.container-fluid{
+		width: 100%;
+		margin: auto;
+	}
+
 	.contain-form{
-	width: 60%;
+	width: 80%;
 	margin: auto;
 	padding-top: 25%;
 	padding-bottom: 25%;
 	}	
+
+	.background-form{
+		width: 100%;
+		margin: auto;
+	}
 }
