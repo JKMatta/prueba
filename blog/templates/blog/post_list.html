@@ -6,7 +6,9 @@
     	<div class="thumbnail">
 	        <div class="post">
 	            <h1><a href="{% url 'post_detail' pk=post.pk %}" class="title-django">{{ post.title }}</a></h1>
-	            <img src="media/{{ post.imagen }}">
+	            <div class="bor-imag">
+	            	<img src="media/{{ post.imagen }}">
+	            </div>
 	            <div class="date">
 	                {{ post.published_date }}
 	            </div>

@@ -258,6 +258,14 @@ section{
     text-decoration: none;
 }
 
+.bor-imag img{
+    width: 100%;
+}
+
+.thumbnail{
+    height: 390;
+}
+
 footer{
     width: 100%;
     text-align: center;
