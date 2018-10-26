@@ -6,8 +6,7 @@
     	<div class="thumbnail" id="conter-perro">
 	        <div class="post">
 	            <h1><a href="{% url 'post_detail' pk=post.pk %}" class="title-django">{{ post.title }}</a></h1>
-	            	<img src="media/{{ post.imagen }}"
-	            	id="foto-perri">
+	            	<img src="media/{{ post.imagen }}" id="foto-perri" width="100%">
 	            <div class="date">
 	                {{ post.published_date }}
 	            </div>
