@@ -3,7 +3,19 @@
 {% block content %}
     <h1>MyPerri</h1>
     <form method="POST" class="post-form">{% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+
+        <div id="tituloedit">
+        	{{ form.title }}
+        </div>
+
+        <div id="textedit">
+        	{{ form.text }}
+        </div>
+
+        <div id="razaedit">
+        	{{ form.raza }}
+        </div>
+
+        <button type="submit" class="save btn btn-default" id="saveedit">Save</button>
     </form>
 {% endblock %}
