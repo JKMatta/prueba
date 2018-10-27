@@ -7,6 +7,12 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     raza = models.CharField(max_length=80)
     text = models.TextField()
+    status = (
+        ('D', 'Disponible'),
+        ('ND', 'No Disponible'),
+        ('P', 'Pronto')
+        )
+    Estado = models.CharField(max_length=2, choices=status, default='D')
     imagen = models.FileField(null=True, blank=True)
     created_date = models.DateTimeField(
             default=timezone.now)
