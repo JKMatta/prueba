@@ -22,4 +22,25 @@ class Post(models.Model):
         
 
     
+class AdoptarRescatado(models.Model):
+    rut = models.CharField(max_length=9)
+    nombre = models.CharField(max_length=25)
+    apellido = models.CharField(max_length=25)
+    edad = models.IntegerField()
+    celular = models.IntegerField()
+    region = models.CharField(max_length=25)
+    comuna = models.CharField(max_length=25)
+    tipo_casa = models.CharField(max_length=25)
+    nombre_rescatado = models.CharField(max_length=25)
+    correo = models.CharField(max_length=50)
+    created_date = models.DateTimeField(
+            default=timezone.now)
+    published_date = models.DateTimeField(
+            blank=True, null=True)
     
+    def publish(self):
+        self.published_date = timezone.now()
+        self.save()
+
+    def __str__(self):
+        return self.rut

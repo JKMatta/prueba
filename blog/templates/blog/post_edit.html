@@ -2,16 +2,13 @@
 
 {% block content %}
 
-        <button type="submit" class="save btn btn-default" id="saveedit">Save</button>
-    </form>
-
     <div class="background-form">
 		<form  <form method="POST" class="form">{% csrf_token %}
 			<h2><b>MODIFICA A TU PERRI</b></h2>
 
 			<br>
 			<!-- Title -->
-        		<div id="titulo">
+        		<div>
         			<h4>Nombre</h4>
         			{{ form.title }}
         		</div>
@@ -29,7 +26,7 @@
         		</div>
 
         	<br>
-			<button>Guardar Cambios</button>
+			<button type="submit" class="save btn btn-default" id="saveedit">Guardar Cambios</button>
 
 		</form>
 	</div>

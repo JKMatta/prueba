@@ -4,15 +4,11 @@ from django.utils import timezone
 
 class PostTestCase( TestCase ):
 
-  def test_postPublish1( self ):
+  def test_equal( self ):
 	#Arrange
 	expected=2
-	result=1
-	x = Post.objects.get(title="test")
-	Post.objects.create(author="javier",title="test")
+	result=2
 	#act
-	if x == "test":
-		result=2
-	
+
 	#assert
 	self.assertAreEqual(expected,result)
