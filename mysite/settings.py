@@ -25,7 +25,7 @@ SECRET_KEY = '%q#!16jc(8#3wcch#_q$@5&5cc@rtxy1i(@ya&y7)w)1zrz#_%'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'n0isu.pythonanywhere.com']
+ALLOWED_HOSTS = ['127.0.0.1', 'myperri.pythonanywhere.com']
 
 
 # Application definition
