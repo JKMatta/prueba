@@ -7,7 +7,6 @@ class Post(models.Model):
     title = models.CharField(max_length=200)
     raza = models.CharField(max_length=80)
     text = models.TextField()
-    Estado = models.CharField(max_length=15)
     imagen = models.FileField(null=True, blank=True)
     created_date = models.DateTimeField(
             default=timezone.now)
