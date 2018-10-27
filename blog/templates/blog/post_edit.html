@@ -1,21 +1,36 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h1>MyPerri</h1>
-    <form method="POST" class="post-form">{% csrf_token %}
-
-        <div id="tituloedit">
-        	{{ form.title }}
-        </div>
-
-        <div id="textedit">
-        	{{ form.text }}
-        </div>
-
-        <div id="razaedit">
-        	{{ form.raza }}
-        </div>
 
         <button type="submit" class="save btn btn-default" id="saveedit">Save</button>
     </form>
+
+    <div class="background-form">
+		<form  <form method="POST" class="form">{% csrf_token %}
+			<h2><b>MODIFICA A TU PERRI</b></h2>
+
+			<br>
+			<!-- Title -->
+        		<div id="titulo">
+        			<h4>Nombre</h4>
+        			{{ form.title }}
+        		</div>
+
+			<!-- TEXT -->
+        		<div>
+        			<h4>Descripción</h4>
+        			{{ form.text }}
+        		</div>
+
+			<!-- RAZA -->
+        		<div>
+        			<h4>Raza</h4>
+        			{{ form.raza }}
+        		</div>
+
+        	<br>
+			<button>Guardar Cambios</button>
+
+		</form>
+	</div>
 {% endblock %}
