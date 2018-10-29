@@ -6,9 +6,8 @@ class PostTestCase( TestCase ):
 
   def test_equal( self ):
 	#Arrange
-	expected=2
-	result=2
+	
 	#act
-
+	
 	#assert
 	self.assertAreEqual(expected,result)
